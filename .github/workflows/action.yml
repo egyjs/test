@@ -20,5 +20,6 @@ jobs:
         run: |
             apt-get update
             apt-get install -y curl apache2-utils
+            bash script.sh
 
 
