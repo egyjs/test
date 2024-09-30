@@ -1,0 +1,24 @@
+name: runbash
+
+on:
+  pull_request:
+    branches:
+      - dev
+
+jobs:
+  script:
+    runs-on: ubuntu-latest
+
+    permissions:
+      # Give the default GITHUB_TOKEN write permission to commit and push the changed files back to the repository.
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run bash script
+        run: |
+            apt-get update
+            apt-get install -y curl apache2-utils
+
+
