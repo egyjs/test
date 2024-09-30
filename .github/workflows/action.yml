@@ -1,9 +1,6 @@
 name: runbash
 
-on:
-  pull_request:
-    branches:
-      - dev
+on: push
 
 jobs:
   script:
